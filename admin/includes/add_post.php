@@ -1,10 +1,10 @@
 <?php
 
-    include 'db.php';  
-    include 'config.php';
-    include 'function.php';
+include_once "../class/Posts.php";
+include_once "../class/database.php";
 
-    $db = new database();
+$post = new Posts;
+
 
     if(isset($_POST['submit'])){
 
@@ -12,6 +12,7 @@
           $author = $_POST['post_author'];
           $date = $_POST['post_date'];
           $content = $_POST['post_content'];
+          $post_status = $_POST['post_status'];
 
             if(isset($_FILES['post_image'])){
 
@@ -28,10 +29,9 @@
               }
 
             }
-        
-          $query = "INSERT INTO post(post_title, post_content, post_image, post_date, post_author)VALUES('$title', '$content', '$uploadfile', '$date', '$author')";
-        
-          $run = $db->insert($query);
+          $data = [$title, $content, $uploadfile, $date, $author, $post_status];
+
+          $run = $post->addPost($data);
           
           if($run){
 

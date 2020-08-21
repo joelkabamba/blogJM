@@ -10,6 +10,7 @@
      <form enctype="multipart/form-data" action="includes/add_post.php" method="post">
          <input type="text" name="post_title" placeholder="title"><br>
          <input type="text" name="post_author" placeholder="author"><br>
+         <input type="text" name="post_status" placeholder="Status"><br>
          <input type="date" name="post_date" placeholder="date"><br>
          <input type="file" name="post_image"><br>
          <textarea name="post_content" cols="30" rows="10" placeholder="contenue"></textarea><br>
