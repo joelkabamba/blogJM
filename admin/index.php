@@ -29,18 +29,18 @@
                         <th>Post titre</th>
                         <th>Post author</th>
                         <th>Post date</th>
+                        <th>Post image</th>
+                        <th>Post statut</th>
                     </tr>
                 </thead>
-                <?php while($row = $posts->fetch_array()): ?>
                 <tbody>
                     <tr>
-                      <th><?php echo $row['ID']; ?></th>  
-                      <th><?php echo $row['post_title']; ?></th>  
-                      <th><?php echo $row['post_author']; ?></th>  
-                      <th> <?php echo formatDate($row['post_date']); ?></th>  
+                      <th></th>  
+                      <th></th>  
+                      <th></th>  
+                      <th></th>
                     </tr>
                 </tbody>
-                <?php endwhile; ?>
             </table>
       </div>
   </div>  
